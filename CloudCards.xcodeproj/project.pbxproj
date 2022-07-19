@@ -19,6 +19,7 @@
 		F4F452F6288664EF003BB557 /* UserStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452F5288664EF003BB557 /* UserStatusView.swift */; };
 		F4F452F928866FC1003BB557 /* CardListView.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452F828866FC1003BB557 /* CardListView.Model.swift */; };
 		F4F452FB28867082003BB557 /* CardView.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452FA28867082003BB557 /* CardView.Model.swift */; };
+		F4F452FD2886714D003BB557 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452FC2886714D003BB557 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		F4F452F5288664EF003BB557 /* UserStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusView.swift; sourceTree = "<group>"; };
 		F4F452F828866FC1003BB557 /* CardListView.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.Model.swift; sourceTree = "<group>"; };
 		F4F452FA28867082003BB557 /* CardView.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.Model.swift; sourceTree = "<group>"; };
+		F4F452FC2886714D003BB557 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F452F728866FA3003BB557 /* ViewModels */,
+				F4F452FC2886714D003BB557 /* CardView.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				F4F452EF288661E1003BB557 /* AuthenticationService.swift in Sources */,
 				685F0766F36468F3D5A5A991 /* SignInView.swift in Sources */,
 				F4F452F928866FC1003BB557 /* CardListView.Model.swift in Sources */,
+				F4F452FD2886714D003BB557 /* CardView.swift in Sources */,
 				F4F452FB28867082003BB557 /* CardView.Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
