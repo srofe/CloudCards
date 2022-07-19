@@ -66,10 +66,81 @@ struct CardView: View {
             )
         }
     }
+
+    var frontView: some View {
+        VStack(alignment: .center) {
+            Spacer()
+            Text(model.card.question)
+                .foregroundColor(.white)
+                .font(.system(size: 20))
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+                .padding(20.0)
+            Spacer()
+            if !model.card.successful {
+                Text("You answered this one incorrectly before")
+                    .foregroundColor(.white)
+                    .font(.system(size: 11.0))
+                    .fontWeight(.bold)
+                    .padding()
+            }
+        }
+    }
+
+    var backView: some View {
+        VStack {
+            Spacer()
+            Text(model.card.answer)
+                .foregroundColor(Color("rw-dark"))
+                .font(.system(size: 20))
+                .padding(20.0)
+                .multilineTextAlignment(.center)
+                .animation(.easeInOut)
+            Spacer()
+            HStack(spacing: 40) {
+                Button {
+                    // TODO: Mark card as successful
+                } label: { ThumbsUp() }
+                Button {
+                    // TODO: Mark card as unsuccessful
+                } label: { ThumbsDown() }
+            }
+            .padding()
+        }
+        .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
+    }
+
+    private func markSuccess(_ successful: Bool) {
+        // TODO: Update the card's successful property
+    }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        let card = testData[0]
+        let model = CardView.Model(card: card)
+        CardView(model: model)
+    }
+}
+
+struct ThumbsDown: View {
+    var body: some View {
+        Image(systemName: "hand.thumbsdown.fill")
+            .padding()
+            .background(Color.red)
+            .font(.title)
+            .foregroundColor(.white)
+            .clipShape(Circle())
+    }
+}
+
+struct ThumbsUp: View {
+    var body: some View {
+        Image(systemName: "hand.thumbsup.fill")
+            .padding()
+            .background(Color.green)
+            .font(.title)
+            .foregroundColor(.white)
+            .clipShape(Circle())
     }
 }
