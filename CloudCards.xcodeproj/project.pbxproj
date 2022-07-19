@@ -14,6 +14,7 @@
 		F4F452E928865370003BB557 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452E828865370003BB557 /* Card.swift */; };
 		F4F452EC28865457003BB557 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452EB28865457003BB557 /* CardRepository.swift */; };
 		F4F452EF288661E1003BB557 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452EE288661E1003BB557 /* AuthenticationService.swift */; };
+		F4F452F4288662DC003BB557 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452F3288662DC003BB557 /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		F4F452E828865370003BB557 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F4F452EB28865457003BB557 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		F4F452EE288661E1003BB557 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		F4F452F3288662DC003BB557 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F4F452ED288661CF003BB557 /* Services */,
 				F4F452EA28865442003BB557 /* Repositories */,
 				F4F452E728865363003BB557 /* Models */,
+				F4F452F028866243003BB557 /* Views */,
 				F4F452D528864580003BB557 /* CloudCardsApp.swift */,
 				F4F452D728864580003BB557 /* ContentView.swift */,
 				F4F452D928864581003BB557 /* Assets.xcassets */,
@@ -98,6 +101,30 @@
 				F4F452EE288661E1003BB557 /* AuthenticationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F4F452F028866243003BB557 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452F128866256003BB557 /* Card */,
+				F4F452F22886625E003BB557 /* User */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4F452F128866256003BB557 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		F4F452F22886625E003BB557 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452F3288662DC003BB557 /* UserView.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4F452D828864580003BB557 /* ContentView.swift in Sources */,
+				F4F452F4288662DC003BB557 /* UserView.swift in Sources */,
 				F4F452EC28865457003BB557 /* CardRepository.swift in Sources */,
 				F4F452E928865370003BB557 /* Card.swift in Sources */,
 				F4F452D628864580003BB557 /* CloudCardsApp.swift in Sources */,
