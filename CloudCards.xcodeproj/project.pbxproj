@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		685F0766F36468F3D5A5A991 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F0DADDB27873ACEFEC911 /* SignInView.swift */; };
+		F4D6B71B28875FED00C13EBF /* NewCardForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B71A28875FED00C13EBF /* NewCardForm.swift */; };
 		F4F452D628864580003BB557 /* CloudCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452D528864580003BB557 /* CloudCardsApp.swift */; };
 		F4F452D828864580003BB557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452D728864580003BB557 /* ContentView.swift */; };
 		F4F452DA28864581003BB557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F452D928864581003BB557 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		685F0DADDB27873ACEFEC911 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		F4D6B71A28875FED00C13EBF /* NewCardForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardForm.swift; sourceTree = "<group>"; };
 		F4F452D228864580003BB557 /* CloudCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F452D528864580003BB557 /* CloudCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCardsApp.swift; sourceTree = "<group>"; };
 		F4F452D728864580003BB557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				F4F452F728866FA3003BB557 /* ViewModels */,
 				F4F452FC2886714D003BB557 /* CardView.swift */,
+				F4D6B71A28875FED00C13EBF /* NewCardForm.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				F4F452F6288664EF003BB557 /* UserStatusView.swift in Sources */,
 				F4F452EF288661E1003BB557 /* AuthenticationService.swift in Sources */,
 				685F0766F36468F3D5A5A991 /* SignInView.swift in Sources */,
+				F4D6B71B28875FED00C13EBF /* NewCardForm.swift in Sources */,
 				F4F452F928866FC1003BB557 /* CardListView.Model.swift in Sources */,
 				F4F452FD2886714D003BB557 /* CardView.swift in Sources */,
 				F4F452FB28867082003BB557 /* CardView.Model.swift in Sources */,
