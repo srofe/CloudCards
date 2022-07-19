@@ -13,6 +13,7 @@
 		F4F452DD28864581003BB557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F452DC28864581003BB557 /* Preview Assets.xcassets */; };
 		F4F452E928865370003BB557 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452E828865370003BB557 /* Card.swift */; };
 		F4F452EC28865457003BB557 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452EB28865457003BB557 /* CardRepository.swift */; };
+		F4F452EF288661E1003BB557 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452EE288661E1003BB557 /* AuthenticationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		F4F452DC28864581003BB557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4F452E828865370003BB557 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F4F452EB28865457003BB557 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
+		F4F452EE288661E1003BB557 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		F4F452D428864580003BB557 /* CloudCards */ = {
 			isa = PBXGroup;
 			children = (
+				F4F452ED288661CF003BB557 /* Services */,
 				F4F452EA28865442003BB557 /* Repositories */,
 				F4F452E728865363003BB557 /* Models */,
 				F4F452D528864580003BB557 /* CloudCardsApp.swift */,
@@ -87,6 +90,14 @@
 				F4F452EB28865457003BB557 /* CardRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F4F452ED288661CF003BB557 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452EE288661E1003BB557 /* AuthenticationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 				F4F452EC28865457003BB557 /* CardRepository.swift in Sources */,
 				F4F452E928865370003BB557 /* Card.swift in Sources */,
 				F4F452D628864580003BB557 /* CloudCardsApp.swift in Sources */,
+				F4F452EF288661E1003BB557 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
