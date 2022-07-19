@@ -11,7 +11,6 @@
 		F4D6B71B28875FED00C13EBF /* NewCardForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B71A28875FED00C13EBF /* NewCardForm.swift */; };
 		F4D6B71D2887621400C13EBF /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B71C2887621400C13EBF /* CardListView.swift */; };
 		F4F452D628864580003BB557 /* CloudCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452D528864580003BB557 /* CloudCardsApp.swift */; };
-		F4F452D828864580003BB557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452D728864580003BB557 /* ContentView.swift */; };
 		F4F452DA28864581003BB557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F452D928864581003BB557 /* Assets.xcassets */; };
 		F4F452DD28864581003BB557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F452DC28864581003BB557 /* Preview Assets.xcassets */; };
 		F4F452E928865370003BB557 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452E828865370003BB557 /* Card.swift */; };
@@ -30,7 +29,6 @@
 		F4D6B71C2887621400C13EBF /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		F4F452D228864580003BB557 /* CloudCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F452D528864580003BB557 /* CloudCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCardsApp.swift; sourceTree = "<group>"; };
-		F4F452D728864580003BB557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4F452D928864581003BB557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F452DC28864581003BB557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4F452E828865370003BB557 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				F4F452E728865363003BB557 /* Models */,
 				F4F452F028866243003BB557 /* Views */,
 				F4F452D528864580003BB557 /* CloudCardsApp.swift */,
-				F4F452D728864580003BB557 /* ContentView.swift */,
 				F4F452D928864581003BB557 /* Assets.xcassets */,
 				F4F452DB28864581003BB557 /* Preview Content */,
 			);
@@ -226,7 +223,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F452D828864580003BB557 /* ContentView.swift in Sources */,
 				F4F452F4288662DC003BB557 /* UserView.swift in Sources */,
 				F4F452EC28865457003BB557 /* CardRepository.swift in Sources */,
 				F4F452E928865370003BB557 /* Card.swift in Sources */,
