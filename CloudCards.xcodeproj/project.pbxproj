@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		685F0766F36468F3D5A5A991 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F0DADDB27873ACEFEC911 /* SignInView.swift */; };
+		F4D6B71B28875FED00C13EBF /* NewCardForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B71A28875FED00C13EBF /* NewCardForm.swift */; };
+		F4D6B71D2887621400C13EBF /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B71C2887621400C13EBF /* CardListView.swift */; };
 		F4F452D628864580003BB557 /* CloudCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452D528864580003BB557 /* CloudCardsApp.swift */; };
-		F4F452D828864580003BB557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452D728864580003BB557 /* ContentView.swift */; };
 		F4F452DA28864581003BB557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F452D928864581003BB557 /* Assets.xcassets */; };
 		F4F452DD28864581003BB557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F452DC28864581003BB557 /* Preview Assets.xcassets */; };
+		F4F452E928865370003BB557 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452E828865370003BB557 /* Card.swift */; };
+		F4F452EC28865457003BB557 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452EB28865457003BB557 /* CardRepository.swift */; };
+		F4F452EF288661E1003BB557 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452EE288661E1003BB557 /* AuthenticationService.swift */; };
+		F4F452F4288662DC003BB557 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452F3288662DC003BB557 /* UserView.swift */; };
+		F4F452F6288664EF003BB557 /* UserStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452F5288664EF003BB557 /* UserStatusView.swift */; };
+		F4F452F928866FC1003BB557 /* CardListView.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452F828866FC1003BB557 /* CardListView.Model.swift */; };
+		F4F452FB28867082003BB557 /* CardView.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452FA28867082003BB557 /* CardView.Model.swift */; };
+		F4F452FD2886714D003BB557 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452FC2886714D003BB557 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		685F0DADDB27873ACEFEC911 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		F4D6B71A28875FED00C13EBF /* NewCardForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardForm.swift; sourceTree = "<group>"; };
+		F4D6B71C2887621400C13EBF /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		F4F452D228864580003BB557 /* CloudCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F452D528864580003BB557 /* CloudCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCardsApp.swift; sourceTree = "<group>"; };
-		F4F452D728864580003BB557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4F452D928864581003BB557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F452DC28864581003BB557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4F452E828865370003BB557 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F4F452EB28865457003BB557 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
+		F4F452EE288661E1003BB557 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		F4F452F3288662DC003BB557 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		F4F452F5288664EF003BB557 /* UserStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusView.swift; sourceTree = "<group>"; };
+		F4F452F828866FC1003BB557 /* CardListView.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.Model.swift; sourceTree = "<group>"; };
+		F4F452FA28867082003BB557 /* CardView.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.Model.swift; sourceTree = "<group>"; };
+		F4F452FC2886714D003BB557 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +71,11 @@
 		F4F452D428864580003BB557 /* CloudCards */ = {
 			isa = PBXGroup;
 			children = (
+				F4F452ED288661CF003BB557 /* Services */,
+				F4F452EA28865442003BB557 /* Repositories */,
+				F4F452E728865363003BB557 /* Models */,
+				F4F452F028866243003BB557 /* Views */,
 				F4F452D528864580003BB557 /* CloudCardsApp.swift */,
-				F4F452D728864580003BB557 /* ContentView.swift */,
 				F4F452D928864581003BB557 /* Assets.xcassets */,
 				F4F452DB28864581003BB557 /* Preview Content */,
 			);
@@ -65,6 +88,69 @@
 				F4F452DC28864581003BB557 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4F452E728865363003BB557 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452E828865370003BB557 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4F452EA28865442003BB557 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452EB28865457003BB557 /* CardRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F4F452ED288661CF003BB557 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452EE288661E1003BB557 /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F4F452F028866243003BB557 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452F128866256003BB557 /* Card */,
+				F4F452F22886625E003BB557 /* User */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4F452F128866256003BB557 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452F728866FA3003BB557 /* ViewModels */,
+				F4F452FC2886714D003BB557 /* CardView.swift */,
+				F4D6B71A28875FED00C13EBF /* NewCardForm.swift */,
+				F4D6B71C2887621400C13EBF /* CardListView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		F4F452F22886625E003BB557 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				685F0DADDB27873ACEFEC911 /* SignInView.swift */,
+				F4F452F3288662DC003BB557 /* UserView.swift */,
+				F4F452F5288664EF003BB557 /* UserStatusView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		F4F452F728866FA3003BB557 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F4F452F828866FC1003BB557 /* CardListView.Model.swift */,
+				F4F452FA28867082003BB557 /* CardView.Model.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +223,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F452D828864580003BB557 /* ContentView.swift in Sources */,
+				F4F452F4288662DC003BB557 /* UserView.swift in Sources */,
+				F4F452EC28865457003BB557 /* CardRepository.swift in Sources */,
+				F4F452E928865370003BB557 /* Card.swift in Sources */,
 				F4F452D628864580003BB557 /* CloudCardsApp.swift in Sources */,
+				F4F452F6288664EF003BB557 /* UserStatusView.swift in Sources */,
+				F4F452EF288661E1003BB557 /* AuthenticationService.swift in Sources */,
+				685F0766F36468F3D5A5A991 /* SignInView.swift in Sources */,
+				F4D6B71B28875FED00C13EBF /* NewCardForm.swift in Sources */,
+				F4F452F928866FC1003BB557 /* CardListView.Model.swift in Sources */,
+				F4F452FD2886714D003BB557 /* CardView.swift in Sources */,
+				F4D6B71D2887621400C13EBF /* CardListView.swift in Sources */,
+				F4F452FB28867082003BB557 /* CardView.Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
