@@ -99,10 +99,10 @@ struct CardView: View {
             Spacer()
             HStack(spacing: 40) {
                 Button {
-                    // TODO: Mark card as successful
+                    markSuccess(true)
                 } label: { ThumbsUp() }
                 Button {
-                    // TODO: Mark card as unsuccessful
+                    markSuccess(false)
                 } label: { ThumbsDown() }
             }
             .padding()
@@ -111,14 +111,17 @@ struct CardView: View {
     }
 
     private func markSuccess(_ successful: Bool) {
-        // TODO: Update the card's successful property
+        var updatedCard = model.card
+        updatedCard.successful = successful
+        model.update(updatedCard)
+        showContent.toggle()
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         let card = testData[0]
-        let model = CardView.Model(card: card)
+        let model = CardView.Model(card: card, cardRepository: CardRepository())
         CardView(model: model)
     }
 }
