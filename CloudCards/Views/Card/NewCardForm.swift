@@ -27,8 +27,7 @@ struct NewCardForm: View {
                 TextField("Enter the answer", text: $answer)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
-            // TODO: Call `add` to add the card
-            Button(action: {  }) {
+            Button(action: addCard) {
                 Text("Add New Card")
                     .foregroundColor(.blue)
             }
@@ -38,7 +37,8 @@ struct NewCardForm: View {
     }
 
     private func addCard() {
-        // TODO: Add a card
+        let card = Card(question: question, answer: answer)
+        cardListViewModel.add(card)
         presentationMode.wrappedValue.dismiss()
     }
 }
