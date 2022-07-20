@@ -22,6 +22,15 @@ class CardRepository: ObservableObject {
         }
     }
 
+    func update(_ card: Card) {
+        guard let cardID = card.id else { return }
+        do {
+            try store.collection(path).document(cardID).setData(from: card)
+        } catch {
+            fatalError("Unable to update card: \(error.localizedDescription)")
+        }
+    }
+
     init() {
         get()
     }
