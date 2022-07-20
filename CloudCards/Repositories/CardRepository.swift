@@ -31,6 +31,15 @@ class CardRepository: ObservableObject {
         }
     }
 
+    func remove(_ card: Card) {
+        guard let cardID = card.id else { return }
+        store.collection(path).document(cardID).delete { error in
+            if let error = error {
+                print("Unable to remove card: \(error.localizedDescription)")
+            }
+        }
+    }
+
     init() {
         get()
     }
