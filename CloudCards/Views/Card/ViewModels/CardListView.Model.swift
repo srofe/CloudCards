@@ -21,5 +21,9 @@ extension CardListView {
             }
             .assign(to: &$cardViewModels)
         }
+
+        func add(_ card: Card) {
+            cardRepository.add(card)
+        }
     }
 }

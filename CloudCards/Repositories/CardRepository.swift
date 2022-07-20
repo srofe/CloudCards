@@ -14,6 +14,14 @@ class CardRepository: ObservableObject {
     private let path = "cards"
     @Published var cards: [Card] = []
 
+    func add(_ card: Card) {
+        do {
+            _ = try store.collection(path).addDocument(from: card)
+        } catch {
+            fatalError("Unable to add card: \(error.localizedDescription)")
+        }
+    }
+
     init() {
         get()
     }
