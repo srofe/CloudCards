@@ -10,6 +10,7 @@
 		685F0766F36468F3D5A5A991 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F0DADDB27873ACEFEC911 /* SignInView.swift */; };
 		F4D6B71B28875FED00C13EBF /* NewCardForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B71A28875FED00C13EBF /* NewCardForm.swift */; };
 		F4D6B71D2887621400C13EBF /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6B71C2887621400C13EBF /* CardListView.swift */; };
+		F4D6B71F2887B02100C13EBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D6B71E2887B02100C13EBF /* GoogleService-Info.plist */; };
 		F4F452D628864580003BB557 /* CloudCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F452D528864580003BB557 /* CloudCardsApp.swift */; };
 		F4F452DA28864581003BB557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F452D928864581003BB557 /* Assets.xcassets */; };
 		F4F452DD28864581003BB557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F452DC28864581003BB557 /* Preview Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		685F0DADDB27873ACEFEC911 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F4D6B71A28875FED00C13EBF /* NewCardForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardForm.swift; sourceTree = "<group>"; };
 		F4D6B71C2887621400C13EBF /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		F4D6B71E2887B02100C13EBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F4F452D228864580003BB557 /* CloudCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F452D528864580003BB557 /* CloudCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCardsApp.swift; sourceTree = "<group>"; };
 		F4F452D928864581003BB557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				F4F452F028866243003BB557 /* Views */,
 				F4F452D528864580003BB557 /* CloudCardsApp.swift */,
 				F4F452D928864581003BB557 /* Assets.xcassets */,
+				F4D6B71E2887B02100C13EBF /* GoogleService-Info.plist */,
 				F4F452DB28864581003BB557 /* Preview Content */,
 			);
 			path = CloudCards;
@@ -213,6 +216,7 @@
 			files = (
 				F4F452DD28864581003BB557 /* Preview Assets.xcassets in Resources */,
 				F4F452DA28864581003BB557 /* Assets.xcassets in Resources */,
+				F4D6B71F2887B02100C13EBF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
