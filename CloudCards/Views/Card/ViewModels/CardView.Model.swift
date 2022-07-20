@@ -10,11 +10,17 @@ import Combine
 
 extension CardView {
     final class Model: ObservableObject, Identifiable {
+        private let cardRepository: CardRepository
         @Published var card: Card
         private var cancellables: Set<AnyCancellable> = []
         var id = ""
 
-        init(card: Card) {
+        func update(_ card: Card) {
+            cardRepository.update(card)
+        }
+
+        init(card: Card, cardRepository: CardRepository) {
+            self.cardRepository = cardRepository
             self.card = card
             $card
                 .compactMap { $0.id }
