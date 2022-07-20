@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct Card: Identifiable, Codable {
-    var id: String?
+    @DocumentID var id: String?
     var question: String
     var answer: String
     var userID: String?
