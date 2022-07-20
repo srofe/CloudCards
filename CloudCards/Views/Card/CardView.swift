@@ -55,7 +55,7 @@ struct CardView: View {
                 message: Text("Are you sure you want to remove this card?"),
                 primaryButton: .destructive(Text("Remove")) {
                     withAnimation {
-                        // TODO: Remove the card
+                        model.remove()
                     }
                 },
                 secondaryButton: .cancel() {
