@@ -19,6 +19,10 @@ extension CardView {
             cardRepository.update(card)
         }
 
+        func remove() {
+            cardRepository.remove(card)
+        }
+
         init(card: Card, cardRepository: CardRepository) {
             self.cardRepository = cardRepository
             self.card = card
