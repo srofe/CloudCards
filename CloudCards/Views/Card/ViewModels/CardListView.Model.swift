@@ -11,5 +11,15 @@ import Combine
 extension CardListView {
     final class Model: ObservableObject {
         @Published var cardViewModels: [CardView.Model] = []
+        @Published var cardRepository = CardRepository()
+
+        init() {
+            cardRepository.$cards.map { cards in
+                cards.map { card in
+                    CardView.Model(card: card)
+                }
+            }
+            .assign(to: &$cardViewModels)
+        }
     }
 }
