@@ -18,7 +18,10 @@ struct CardListView: View {
             GeometryReader { geometry in
                 ScrollView(.vertical) {
                     VStack {
-                        // TODO: Add cards here!
+                        ForEach(model.cardViewModels) { cardViewModel in
+                            CardView(model: cardViewModel)
+                                .padding(.vertical)
+                        }
                     }
                     .frame(width: geometry.size.width)
                 }
