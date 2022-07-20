@@ -16,7 +16,7 @@ extension CardListView {
         init() {
             cardRepository.$cards.map { cards in
                 cards.map { card in
-                    CardView.Model(card: card)
+                    CardView.Model(card: card, cardRepository: self.cardRepository)
                 }
             }
             .assign(to: &$cardViewModels)
