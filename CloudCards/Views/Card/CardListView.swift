@@ -10,7 +10,6 @@ import SwiftUI
 struct CardListView: View {
     @ObservedObject var model = Model()
     @State var showForm = false
-    @State var showUserView = false
     @State var showSignInView = false
 
     var body: some View {
@@ -29,14 +28,18 @@ struct CardListView: View {
             .sheet(isPresented: $showForm) {
                 NewCardForm(cardListViewModel: model)
             }
+            .fullScreenCover(isPresented: $showSignInView) {
+                SignInView()
+            }
+            .onAppear {
+                showSignInView = model.user == nil ? true : false
+            }
+            .onChange(of: model.user) { user in
+                showSignInView = user == nil ? true : false
+            }
             .navigationTitle("Cloud Cards")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
-                leading: Button { showUserView = true }
-                label: {
-                    Image(systemName: "person.fill")
-                        .font(.title)
-                },
                 trailing: Button { showForm.toggle() }
                 label: {
                     Image(systemName: "plus")

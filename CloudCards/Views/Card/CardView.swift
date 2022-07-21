@@ -113,18 +113,22 @@ struct CardView: View {
     private func markSuccess(_ successful: Bool) {
         var updatedCard = model.card
         updatedCard.successful = successful
-        model.update(updatedCard)
+        update(card: updatedCard)
+    }
+
+    func update(card: Card) {
+        model.update(card)
         showContent.toggle()
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        let card = testData[0]
-        let model = CardView.Model(card: card, cardRepository: CardRepository())
-        CardView(model: model)
-    }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let card = testData[0]
+//        let model = CardView.Model(card: card, cardRepository: CardRepository())
+//        CardView(model: model)
+//    }
+//}
 
 struct ThumbsDown: View {
     var body: some View {
