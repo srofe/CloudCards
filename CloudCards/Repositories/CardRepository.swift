@@ -14,32 +14,6 @@ class CardRepository: ObservableObject {
     private let path = "cards"
     @Published var cards: [Card] = []
 
-    func add(_ card: Card) {
-        do {
-            _ = try store.collection(path).addDocument(from: card)
-        } catch {
-            fatalError("Unable to add card: \(error.localizedDescription)")
-        }
-    }
-
-    func update(_ card: Card) {
-        guard let cardID = card.id else { return }
-        do {
-            try store.collection(path).document(cardID).setData(from: card)
-        } catch {
-            fatalError("Unable to update card: \(error.localizedDescription)")
-        }
-    }
-
-    func remove(_ card: Card) {
-        guard let cardID = card.id else { return }
-        store.collection(path).document(cardID).delete { error in
-            if let error = error {
-                print("Unable to remove card: \(error.localizedDescription)")
-            }
-        }
-    }
-
     init() {
         get()
     }
@@ -48,12 +22,38 @@ class CardRepository: ObservableObject {
         store.collection(path)
             .addSnapshotListener { querySnapshot, error in
                 if let error = error {
-                    print("Error fetting cards: \(error.localizedDescription)")
+                    print("Error getting cards: \(error.localizedDescription)")
                     return
                 }
                 self.cards = querySnapshot?.documents.compactMap { document in
                     try? document.data(as: Card.self)
                 } ?? []
             }
+    }
+
+    func add(_ card: Card) {
+        do {
+            _ = try store.collection(path).addDocument(from: card)
+        } catch {
+            fatalError("Unable to add card: \(error.localizedDescription).")
+        }
+    }
+
+    func update(_ card: Card) {
+        guard let cardId = card.id else { return }
+        do {
+            try store.collection(path).document(cardId).setData(from: card)
+        } catch {
+            fatalError("Unable to update card: \(error.localizedDescription).")
+        }
+    }
+
+    func remove(_ card: Card) {
+        guard let cardId = card.id else { return }
+        store.collection(path).document(cardId).delete { error in
+            if let error = error {
+                print("Unable to remove card: \(error.localizedDescription)")
+            }
+        }
     }
 }
