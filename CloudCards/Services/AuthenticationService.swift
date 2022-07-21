@@ -15,10 +15,8 @@ class AuthenticationService: ObservableObject {
         addListeners()
     }
 
-    static func signIn() {
-        if Auth.auth().currentUser == nil {
-            Auth.auth().signInAnonymously()
-        }
+    static func signIn(email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
 
     private func addListeners() {
