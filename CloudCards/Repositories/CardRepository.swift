@@ -13,9 +13,23 @@ class CardRepository: ObservableObject {
     private let store = Firestore.firestore()
     private let path = "cards"
     @Published var cards: [Card] = []
+    var userID = ""
+    private let authenticationService = AuthenticationService()
+    private var cancellables: Set<AnyCancellable> = []
 
     init() {
-        get()
+        authenticationService.$user
+            .compactMap { user in
+                user?.uid
+            }
+            .assign(to: \.userID, on: self)
+            .store(in: &cancellables)
+        authenticationService.$user
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.get()
+            }
+            .store(in: &cancellables)
     }
 
     func get() {
@@ -33,7 +47,9 @@ class CardRepository: ObservableObject {
 
     func add(_ card: Card) {
         do {
-            _ = try store.collection(path).addDocument(from: card)
+            var newCard = card
+            newCard.userID = userID
+            _ = try store.collection(path).addDocument(from: newCard)
         } catch {
             fatalError("Unable to add card: \(error.localizedDescription)")
         }
