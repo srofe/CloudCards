@@ -10,8 +10,8 @@ import SwiftUI
 struct CardListView: View {
     @ObservedObject var model = Model()
     @State var showForm = false
-    @State var showUserView = false
-    @State var showSignInView = false
+//    @State var showUserView = false
+//    @State var showSignInView = false
 
     var body: some View {
         NavigationView {
@@ -20,7 +20,7 @@ struct CardListView: View {
                     VStack {
                         ForEach(model.cardViewModels) { cardViewModel in
                             CardView(model: cardViewModel)
-                                .padding(.vertical)
+                                .padding([.vertical])
                         }
                     }
                     .frame(width: geometry.size.width)
@@ -32,16 +32,18 @@ struct CardListView: View {
             .navigationTitle("Cloud Cards")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
-                leading: Button { showUserView = true }
-                label: {
-                    Image(systemName: "person.fill")
-                        .font(.title)
-                },
-                trailing: Button { showForm.toggle() }
-                label: {
-                    Image(systemName: "plus")
-                        .font(.title)
-                }
+//                leading:
+//                Button { showUserView = true }
+//                  label: {
+//                      Image(systemName: "person.fill")
+//                        .font(.title)
+//                  },
+                trailing:
+                    Button { showForm.toggle() }
+                        label: {
+                                Image(systemName: "plus")
+                                    .font(.title)
+                        }
             )
         }
     }

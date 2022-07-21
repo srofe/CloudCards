@@ -19,7 +19,7 @@ struct NewCardForm: View {
                 Text("Question")
                     .foregroundColor(.gray)
                 TextField("Enter the question", text: $question)
-                    .textFieldStyle((RoundedBorderTextFieldStyle()))
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             VStack(alignment: .leading, spacing: 10) {
                 Text("Answer")

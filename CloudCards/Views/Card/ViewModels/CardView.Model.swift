@@ -15,21 +15,21 @@ extension CardView {
         private var cancellables: Set<AnyCancellable> = []
         var id = ""
 
-        func update(_ card: Card) {
-            cardRepository.update(card)
-        }
-
-        func remove() {
-            cardRepository.remove(card)
-        }
-
-        init(card: Card, cardRepository: CardRepository) {
-            self.cardRepository = cardRepository
+        init(card: Card, repository: CardRepository) {
+            self.cardRepository = repository
             self.card = card
             $card
                 .compactMap { $0.id }
                 .assign(to: \.id, on: self)
                 .store(in: &cancellables)
+        }
+
+        func update(card: Card) {
+            cardRepository.update(card)
+        }
+
+        func remove() {
+            cardRepository.remove(card)
         }
     }
 }
