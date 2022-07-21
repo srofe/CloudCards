@@ -34,6 +34,7 @@ class CardRepository: ObservableObject {
 
     func get() {
         store.collection(path)
+            .whereField("userID", isEqualTo: userID)
             .addSnapshotListener { querySnapshot, error in
                 if let error = error {
                     print("Error getting cards: \(error.localizedDescription)")
