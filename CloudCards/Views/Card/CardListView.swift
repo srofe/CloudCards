@@ -5,13 +5,13 @@
 //  Created by Simon Rofe on 20/7/2022.
 //
 
+import Firebase
 import SwiftUI
 
 struct CardListView: View {
     @ObservedObject var model = Model()
     @State var showForm = false
-//    @State var showUserView = false
-//    @State var showSignInView = false
+    // TODO: add showSignIn
 
     var body: some View {
         NavigationView {
@@ -29,15 +29,10 @@ struct CardListView: View {
             .sheet(isPresented: $showForm) {
                 NewCardForm(cardListViewModel: model)
             }
+            // TODO: show SignInView
             .navigationTitle("Cloud Cards")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
-//                leading:
-//                Button { showUserView = true }
-//                  label: {
-//                      Image(systemName: "person.fill")
-//                        .font(.title)
-//                  },
                 trailing:
                     Button { showForm.toggle() }
                         label: {

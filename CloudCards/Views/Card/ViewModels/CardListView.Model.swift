@@ -13,6 +13,10 @@ extension CardListView {
         @Published var cardViewModels: [CardView.Model] = []
         @Published var cardRepository = CardRepository()
 
+        // TODO: Add authentication service
+
+        // TODO: Add user & cancellables
+
         init() {
             cardRepository.$cards.map { cards in
                 cards.map { card in

@@ -7,27 +7,26 @@ import SwiftUI
 struct SignInView: View {
     @State var email = ""
     @State var password = ""
-    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
-        VStack(alignment: .center, spacing: 20) {
-            Button {
-                // TODO: Sign in anonymously
-                presentationMode.wrappedValue.dismiss()
-            } label: { GuestSignInButton() }
-            Divider().padding(.vertical)
-            UserInfoForm(email: $email, password: $password)
-            Button {
-                // TODO: Sign in with email & password
-                presentationMode.wrappedValue.dismiss()
-            } label: { SignInButton() }
-                .disabled(true)
-            Button {
-                // TODO: Add a new user
-                presentationMode.wrappedValue.dismiss()
-            } label: { SignUpButton() }
-                .disabled(true)
-            Spacer()
+        ZStack {
+            SignInBackgroundView()
+            VStack(alignment: .center, spacing: 20) {
+                Text("Sign In to Cloud Cards")
+                    .font(.largeTitle)
+                    .foregroundColor(Color("rw-dark"))
+                UserInfoForm(email: $email, password: $password)
+                VStack {
+                    Button {
+                        // TODO: Sign In
+                    } label: { SignInButton() }
+                    Button {
+                        // TODO: Add New User
+                    } label: { SignUpButton() }
+                }
+                Spacer()
+            }
+            .padding()
         }
     }
 }
@@ -64,23 +63,6 @@ struct UserInfoForm: View {
 }
 
 // MARK: - Button Views
-struct GuestSignInButton: View {
-    var body: some View {
-        HStack {
-            Spacer()
-            Image(systemName: "cloud.fill")
-                .font(.title)
-                .foregroundColor(Color("grey-iron"))
-            Text("Try Cloud Cards as a Guest")
-                .foregroundColor(Color.white)
-            Spacer()
-        }
-        .padding()
-        .background(Color("blue-curious"))
-        .cornerRadius(15)
-    }
-}
-
 struct SignUpButton: View {
     @Environment(\.isEnabled) var isEnabled
 

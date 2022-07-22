@@ -16,6 +16,7 @@ class AuthenticationService: ObservableObject {
     }
 
     static func signIn() {
+        // TODO: - Update to use Email & Password
         if Auth.auth().currentUser == nil {
             Auth.auth().signInAnonymously()
         }
