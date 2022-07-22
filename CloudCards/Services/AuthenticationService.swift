@@ -19,6 +19,10 @@ class AuthenticationService: ObservableObject {
         Auth.auth().signIn(withEmail: email, link: password, completion: completion)
     }
 
+    static func addNewUser(email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
+        Auth.auth().createUser(withEmail: email, password: password, completion: completion)
+    }
+
     private func addListeners() {
         if let handle = authenticationStateHandle {
             Auth.auth().removeStateDidChangeListener(handle)
