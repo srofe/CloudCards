@@ -15,13 +15,13 @@ extension CardListView {
         @Published var cardRepository: CardRepository
         let authenticationService = AuthenticationService()
         @Published var user: User?
-        private var calcellables: Set<AnyCancellable> = []
+        private var cancellables: Set<AnyCancellable> = []
 
         init() {
             cardRepository = CardRepository(authenticationService: authenticationService)
             authenticationService.$user
                 .assign(to: \.user, on: self)
-                .store(in: &calcellables)
+                .store(in: &cancellables)
             cardRepository.$cards.map { cards in
                 cards.map { card in
                     CardView.Model(card: card, repository: self.cardRepository)

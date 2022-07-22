@@ -11,7 +11,7 @@ import SwiftUI
 struct CardListView: View {
     @ObservedObject var model = Model()
     @State var showForm = false
-    // TODO: add showSignIn
+    @State var showSignInView = false
 
     var body: some View {
         NavigationView {
@@ -29,7 +29,15 @@ struct CardListView: View {
             .sheet(isPresented: $showForm) {
                 NewCardForm(cardListViewModel: model)
             }
-            // TODO: show SignInView
+            .fullScreenCover(isPresented: $showSignInView) {
+                SignInView()
+            }
+            .onAppear {
+                showSignInView = model.user == nil ? true : false
+            }
+            .onChange(of: model.user) { user in
+                showSignInView = user == nil ? true : false
+            }
             .navigationTitle("Cloud Cards")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(

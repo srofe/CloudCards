@@ -122,13 +122,13 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        let card = testData[0]
-        let model = CardView.Model(card: card, repository: CardRepository())
-        return CardView(model: model)
-    }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let card = testData[0]
+//        let model = CardView.Model(card: card, repository: CardRepository())
+//        return CardView(model: model)
+//    }
+//}
 
 struct ThumbsDown: View {
     var body: some View {
