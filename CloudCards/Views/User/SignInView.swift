@@ -18,7 +18,11 @@ struct SignInView: View {
                 UserInfoForm(email: $email, password: $password)
                 VStack {
                     Button {
-                        // TODO: Sign In
+                        AuthenticationService.addNewUser(email: email, password: password) { authResult, error in
+                            if let error = error {
+                                // TODO: handle error
+                            }
+                        }
                     } label: { SignInButton() }
                     Button {
                         // TODO: Add New User
