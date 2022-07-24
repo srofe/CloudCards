@@ -19,18 +19,19 @@ struct SignInView: View {
                 UserInfoForm(email: $email, password: $password)
                 VStack {
                     Button {
+                        // TODO: Sign In
+                    } label: { SignInButton() }
+                    Button {
                         AuthenticationService.addNewUser(email: email, password: password) { authResult, error in
                             if let error = error {
                                 // TODO: handle error
+                                print("Error creating new user: \(error.localizedDescription)")
                             } else {
                                 if let userInfo = authResult?.additionalUserInfo, userInfo.isNewUser {
                                     cardListViewModel.addStarterCards()
                                 }
                             }
                         }
-                    } label: { SignInButton() }
-                    Button {
-                        // TODO: Add New User
                     } label: { SignUpButton() }
                 }
                 Spacer()
