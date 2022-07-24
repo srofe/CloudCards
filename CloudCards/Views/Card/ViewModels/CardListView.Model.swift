@@ -33,5 +33,29 @@ extension CardListView {
         func add(_ card: Card) {
             cardRepository.add(card)
         }
+
+        func addStarterCards() {
+            let cards = [
+                Card(
+                    question: "Which type of cloud is closest to the ground?",
+                    answer: "Stratus"
+                ),
+                Card(
+                    question: "What is the study of clouds called?",
+                    answer: "Nephology"
+                ),
+                Card(
+                    question: "Which Cloud is originally from Nibelheim?",
+                    answer: "Cloud Strife"
+                ),
+                Card(
+                    question: "Which type of cloud does Goku use for transportation?",
+                    answer: "Flying Nimbus"
+                )
+            ]
+            cards.forEach { card in
+                cardRepository.add(card)
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@ import SwiftUI
 struct SignInView: View {
     @State var email = ""
     @State var password = ""
+    @ObservedObject var cardListViewModel: CardListView.Model
 
     var body: some View {
         ZStack {
@@ -21,6 +22,10 @@ struct SignInView: View {
                         AuthenticationService.addNewUser(email: email, password: password) { authResult, error in
                             if let error = error {
                                 // TODO: handle error
+                            } else {
+                                if let userInfo = authResult?.additionalUserInfo, userInfo.isNewUser {
+                                    cardListViewModel.addStarterCards()
+                                }
                             }
                         }
                     } label: { SignInButton() }
@@ -37,7 +42,7 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        SignInView(cardListViewModel: CardListView.Model())
     }
 }
 
