@@ -30,7 +30,7 @@ struct CardListView: View {
                 NewCardForm(cardListViewModel: model)
             }
             .fullScreenCover(isPresented: $showSignInView) {
-                SignInView()
+                SignInView(cardListViewModel: model)
             }
             .onAppear {
                 showSignInView = model.user == nil ? true : false
