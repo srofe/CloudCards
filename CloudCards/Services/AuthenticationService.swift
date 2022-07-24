@@ -16,7 +16,18 @@ class AuthenticationService: ObservableObject {
     }
 
     static func signIn(email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
+        if Auth.auth().currentUser != nil  {
+            Self.signOut()
+        }
         Auth.auth().signIn(withEmail: email, link: password, completion: completion)
+    }
+
+    static func signOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("Error signing out: \(error.localizedDescription)")
+        }
     }
 
     static func addNewUser(email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
