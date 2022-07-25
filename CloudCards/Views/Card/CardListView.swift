@@ -41,6 +41,17 @@ struct CardListView: View {
             .navigationTitle("Cloud Cards")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
+                leading:
+                    Menu {
+                        if let email = model.user?.email {
+                            Text(email)
+                            Button("Sign Out", action: AuthenticationService.signOut)
+                        }
+                    }
+                        label: {
+                            Image(systemName: "person.fill")
+                                .font(.title)
+                        },
                 trailing:
                     Button { showForm.toggle() }
                         label: {
