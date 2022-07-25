@@ -19,7 +19,9 @@ struct SignInView: View {
                 UserInfoForm(email: $email, password: $password)
                 VStack {
                     Button {
-                        // TODO: Sign In
+                        AuthenticationService.signIn(email: email, password: password) { _, error in
+                            print("Error signing in: \(error?.localizedDescription)")
+                        }
                     } label: { SignInButton() }
                     Button {
                         AuthenticationService.addNewUser(email: email, password: password) { authResult, error in
