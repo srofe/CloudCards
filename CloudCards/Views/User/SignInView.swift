@@ -20,7 +20,7 @@ struct SignInView: View {
                 VStack {
                     Button {
                         AuthenticationService.signIn(email: email, password: password) { _, error in
-                            print("Error signing in: \(error.localizedDescription)")
+                            print("Error signing in: \(error?.localizedDescription)")
                         }
                     } label: { SignInButton() }
                     Button {
@@ -35,8 +35,8 @@ struct SignInView: View {
                             }
                         }
                     } label: { SignUpButton() }
-                        .disabled(email.isEmpty || password.count < 6)
                 }
+                .disabled(email.isEmpty || password.count < 6)
                 Spacer()
             }
             .padding()
