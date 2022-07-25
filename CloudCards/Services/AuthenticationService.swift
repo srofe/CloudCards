@@ -5,7 +5,8 @@
 //  Created by Simon Rofe on 19/7/2022.
 //
 
-import Firebase
+import FirebaseCore
+import FirebaseAuth
 
 class AuthenticationService: ObservableObject {
     @Published var user: User?
@@ -19,7 +20,7 @@ class AuthenticationService: ObservableObject {
         if Auth.auth().currentUser != nil  {
             Self.signOut()
         }
-        Auth.auth().signIn(withEmail: email, link: password, completion: completion)
+        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
 
     static func signOut() {
