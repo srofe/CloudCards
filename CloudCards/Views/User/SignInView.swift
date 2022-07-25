@@ -7,6 +7,8 @@ import SwiftUI
 struct SignInView: View {
     @State var email = ""
     @State var password = ""
+    @State var showAlert = false
+    @State var errorDescription: String?
     @ObservedObject var cardListViewModel: CardListView.Model
 
     var body: some View {
@@ -20,14 +22,13 @@ struct SignInView: View {
                 VStack {
                     Button {
                         AuthenticationService.signIn(email: email, password: password) { _, error in
-                            print("Error signing in: \(error?.localizedDescription)")
+                            if let error = error { showError(error: error) }
                         }
                     } label: { SignInButton() }
                     Button {
                         AuthenticationService.addNewUser(email: email, password: password) { authResult, error in
                             if let error = error {
-                                // TODO: handle error
-                                print("Error creating new user: \(error.localizedDescription)")
+                                showError(error: error)
                             } else {
                                 if let userInfo = authResult?.additionalUserInfo, userInfo.isNewUser {
                                     cardListViewModel.addStarterCards()
@@ -40,7 +41,15 @@ struct SignInView: View {
                 Spacer()
             }
             .padding()
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text(errorDescription ?? "😱"))
+            }
         }
+    }
+
+    private func showError(error: Error) {
+        errorDescription = error.localizedDescription
+        showAlert = true
     }
 }
 
